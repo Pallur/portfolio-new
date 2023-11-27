@@ -16,6 +16,6 @@ function AppWithUI() {
   );
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("page")!;
 const root = ReactDOMClient.createRoot(rootElement);
 root.render(<AppWithUI />);
