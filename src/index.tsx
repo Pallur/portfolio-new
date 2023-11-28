@@ -1,9 +1,9 @@
 import { StrictMode, useState } from "react";
 import * as ReactDOMClient from "react-dom/client";
+import { SidebarElement } from "./Sidebar";
+import "./styles.css";
 
 import App from "./App";
-// import { Refresh } from "./template/Refresh";
-// <Refresh onClick={() => setCount(count + 1)} />
 
 function AppWithUI() {
   const [count, setCount] = useState(0);
@@ -16,5 +16,8 @@ function AppWithUI() {
 }
 
 const rootElement = document.getElementById("root")!;
+const sideElement = document.getElementById("sidebar")!;
 const root = ReactDOMClient.createRoot(rootElement);
+const sidebar = ReactDOMClient.createRoot(sideElement)
 root.render(<AppWithUI />);
+sidebar.render(<SidebarElement />);
