@@ -41,7 +41,7 @@ body{
     left: 0;
     bottom: 0;
     width: 300px;
-    background: #fff;
+    background: linear-gradient(180deg, rgb(217, 165, 247) 0%, rgb(63, 175, 250) 100%);
   }
   
   button {
@@ -134,4 +134,43 @@ body{
     right: 0;
     display: flex;
   }
+
+  h1{
+    font-family: sofia-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 100px 0 10px;
+  }
+
+  #info{
+    position: relative;
+  }
+
+  h3{
+    font-family: sofia-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;
+    margin: 10px 0 4px;
+  }
+
+  h2{
+    font-family: sofia-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;
+    margin: 10px 0 4px;
+  }
+  
   
