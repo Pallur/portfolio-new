@@ -9,7 +9,7 @@ export default function App() {
           animate={{
             scale: [2, 3, 3, 2, 2],
             rotate: [0, 0, 180, 180, 0],
-            borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+            borderRadius: ["5%", "5%", "50%", "50%", "5%"]
           }}
           transition={{
             duration: 2,
