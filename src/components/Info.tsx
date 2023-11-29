@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../styles.css";
 import { motion } from "framer-motion";
 
 export const InfoElement = () => {
