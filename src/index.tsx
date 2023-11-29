@@ -6,16 +6,6 @@ import "./styles.css";
 
 import App from "./App";
 
-function AppWithUI() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <StrictMode>
-      <App key={count} />
-    </StrictMode>
-  );
-}
-
 const rootElement = document.getElementById("root")!;
 const root = ReactDOMClient.createRoot(rootElement);
 const sideElement = document.getElementById("sidebar")!;
@@ -24,6 +14,6 @@ const textElement = document.getElementById("info")!;
 const textEl = ReactDOMClient.createRoot(textElement)
 
 
-root.render(<AppWithUI />);
+root.render(<App />);
 sidebar.render(<SidebarElement />);
 textEl.render(<InfoElement />);

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function App() {
     return (
-      <div>
+      <>
         <motion.div
           className="box"
           animate={{
@@ -12,13 +12,13 @@ export default function App() {
             borderRadius: ["5%", "5%", "50%", "50%", "5%"]
           }}
           transition={{
-            duration: 2,
+            duration: 5,
             ease: "easeInOut",
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: Infinity,
             repeatDelay: 1
           }}
         />
-      </div>
+      </>
     );
   }
