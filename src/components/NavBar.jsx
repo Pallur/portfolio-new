@@ -5,7 +5,6 @@ import useScrollSpy from "react-use-scrollspy";
 const links = [
   { label: "Home", url: "home" },
   { label: "About", url: "about" },
-  { label: "Blog", url: "blog" },
   { label: "Contact", url: "contact" }
 ];
 
@@ -28,26 +27,37 @@ const NavBar = () => {
 
   return (
     <>
-      <div id="home" className="App">
+      <div id="home">
+        <h1 id="intro">Hello! My name is Páll [paʊ̯l] but please call me Palli [ˈpalɪ]</h1>
+      </div>
+      <div className="App">
         <nav>
-          <motion.ul>
+          <motion.ul 
+          whileHover={{  }}
+          transition={{ duration: 4,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 1
+                     }}>
             {links.map(({ label, url }, index) => {
               const isActive = index === activeIndex;
 
               return (
                 <motion.li key={index} onClick={() => setActiveIndex(index)}>
-                  <a href={"#" + url}>
+                  <motion.a href={"#" + url}
+                  whileHover={{ rotate: [0, 2, 0, -2, 0], scale: 1.2 }}
+                  transition={{ duration: 0.5 }}>
                     {isActive ? (
                       <motion.span layoutId="shadow" className="shadow" />
                     ) : null}
                     <span style={isActive ? active : inactive}>{label}</span>
-                  </a>
+                  </motion.a>
                 </motion.li>
               );
             })}
           </motion.ul>
         </nav>
-      </div>
+    </div>
     </>
   );
 };
