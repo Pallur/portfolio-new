@@ -27,8 +27,19 @@ const NavBar = () => {
 
   return (
     <>
-      <div id="home">
-        <h1 id="intro">Hello! My name is Páll [paʊ̯l] but please call me Palli [ˈpalɪ]</h1>
+      <div id="root-home">
+        <div id="home">
+        <h1 id="intro">Hello!</h1>
+        <h1>My name is 
+            <motion.h1 whileHover={{ rotate: [0, 2, 0, -2, 0] }}> 
+                Páll [paʊ̯l] 
+            </motion.h1>
+            but please call me 
+            <motion.h1 whileHover={{ rotate: [0, 2, 0, -2, 0] }}> 
+                Palli [ˈpalɪ]
+            </motion.h1>
+            </h1>
+        </div>
       </div>
       <div className="App">
         <nav>
