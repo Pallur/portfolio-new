@@ -105,7 +105,7 @@ export default function App() {
             </motion.div> 
             or give me a call: 
             <motion.h3 whileHover={{rotate: 0.2}}>
-                <h3>824-8916</h3>
+                <h3>+354 824-8916</h3>
             </motion.h3>
             </h2>
           </div>
