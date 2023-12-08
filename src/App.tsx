@@ -95,17 +95,16 @@ export default function App() {
           <div id="contact">
             <h2 id="third">
             Thank you for visiting, and I look forward to engaging with fellow enthusiasts, 
-            professionals, and potential collaborators in both the realms of 
-            computer science and digital art.
+            professionals, and potential collaborators in both computer science and digital art.
             <br />
             <br />
             You can contact me on 
-            <motion.div whileHover={{rotate: 0.2}}>
-                <h3>palliasgeir@gmail.com</h3>
+            <motion.div whileHover={{ rotate: 0.2 }}>
+                <h3>palliasgeir(at)gmail.com</h3>
             </motion.div> 
-            or give me a call: 
-            <motion.h3 whileHover={{rotate: 0.2}}>
-                <h3>+354 824-8916</h3>
+            or give me a call: (hover over to see) 
+            <motion.h3 initial={{ opacity: 0 }} whileHover={{ rotate: 0.2, opacity: 1 }}>
+                <h3 id="phone">+354 824-8916</h3>
             </motion.h3>
             </h2>
           </div>
