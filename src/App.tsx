@@ -1,5 +1,6 @@
 import "./styles.css";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Modal from "react-modal";
 import NavBar from "./components/NavBar";
 import "./fonts/JosefinSans-VariableFont_wght.ttf"
@@ -23,8 +24,12 @@ export default function App() {
             <h2 id="first">
                 Hi ! I am Palli.
                 <br />
+                <br />
                 I am a versatile professional with a double interest
-                in computer science and digital art. Throughout my journey as a Computer Scientist,
+                in computer science and digital art. 
+                <br />
+                <br />
+                Throughout my journey as a Computer Scientist,
                 I have had the great oppertunity to work on challenging projects which have
                 shaped me into the developer I am today. I remain committed to keep up with 
                 industry trends and adopting best practices to that I can effectively navitage
@@ -50,26 +55,59 @@ export default function App() {
                 <br />
                 <div id="imgdiv">
                     <img src="ballon.jpg" alt="ballon" onClick={() => openModal("ballon.jpg")}/>
-                    <img src="greenorange.jpg" alt="ballon" onClick={() => openModal("greenorange.jpg")}/>
-                    <img src="reddoor.jpg" alt="ballon" onClick={() => openModal("reddoor.jpg")}/>
-                    <img src="roofmen.jpg" alt="ballon" onClick={() => openModal("roofmen.jpg")}/>
+                    <img src="greenorange.jpg" alt="greenorange" onClick={() => openModal("greenorange.jpg")}/>
+                    <img src="reddoor.jpg" alt="reddoor" onClick={() => openModal("reddoor.jpg")}/>
+                    <img src="roofmen.jpg" alt="roofmen" onClick={() => openModal("roofmen.jpg")}/>
                     <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
                     ariaHideApp={false} // Fix for accessibility
+                    style={{ 
+                        overlay: {
+                            position: 'fixed',
+                            margin: 'auto',
+                            backgroundColor:'rgba(54, 175, 215, 0.3)',
+                            padding: '0'
+
+                        },
+                        content: {
+                            position: 'absolute',
+                            margin: 'auto',
+                            backgroundColor:'rgba(245, 40, 145, 0)',
+                            display: 'flex',
+                            border: '1px none',
+                            borderRadius: '60px',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: 'fit-content'
+                        }
+                     }}
                     > 
                     <img
                     src={selectedImage}
                     alt="enlarged"
-                    style={{ width: "50%" }}
+                    style={{ width: '400px' }}
                     />
-                    <button onClick={closeModal}>Close</button>
                     </Modal>
                 </div>
             </h2>
           </div>
           <div id="contact">
-          
+            <h2 id="third">
+            Thank you for visiting, and I look forward to engaging with fellow enthusiasts, 
+            professionals, and potential collaborators in both the realms of 
+            computer science and digital art.
+            <br />
+            <br />
+            You can contact me on 
+            <motion.div whileHover={{rotate: 0.2}}>
+                <h3>palliasgeir@gmail.com</h3>
+            </motion.div> 
+            or give me a call: 
+            <motion.h3 whileHover={{rotate: 0.2}}>
+                <h3>824-8916</h3>
+            </motion.h3>
+            </h2>
           </div>
       </>
     );

@@ -123,7 +123,7 @@ html {
     font-family: "JosefinSans";
     width: 100vw;
     height: 100vh;
-    background: #548fe9;
+    background: #118ab2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,20 +134,20 @@ html {
     font-family: "JosefinSans";
     width: 100vw;
     height: 100vh;
-    background: #e63946;
+    background: #06d6a0;
     display: flex;
   }
 
   h2 {
-    line-height: 4vh;
-    margin: 5vw;
+    line-height: 2.6vh;
+    margin: 3vw;
     margin-top: 5vh;
   }
 
   h2#first {
     max-width: 50%;
     padding: 2vw;
-    background-color: #d6befc75;
+    background-color: #ff69bcad;
     border-radius: 20px;
     height: fit-content;
   }
@@ -155,13 +155,15 @@ html {
   h2#second {
     max-width: 50%;
     padding: 2vw;
-    background-color: #7fe0f885;
+    background-color: #ff69bcad;
     border-radius: 20px;
   }
 
   #imgdiv {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    
   }
 
   img {
@@ -171,12 +173,18 @@ html {
   }
   
   #contact {
+    font-family: "JosefinSans";
     width: 100vw;
     height: 100vh;
-    background: rgb(176, 247, 152);
+    background: #fdd679;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  h2#third {
+    font-size: 200%;
+    line-height: 4vh;
   }
   
   @font-face {
