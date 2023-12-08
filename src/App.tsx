@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Modal from "react-modal";
 import NavBar from "./components/NavBar";
 import "./fonts/JosefinSans-VariableFont_wght.ttf"
+import PdfViewer from "./components/PdfViewer";
 
 export default function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -107,6 +108,10 @@ export default function App() {
                 <h3 id="phone">+354 824-8916</h3>
             </motion.h3>
             </h2>
+            <div id="pdfviewer">
+                <PdfViewer/>
+            </div>
+            
           </div>
       </>
     );
