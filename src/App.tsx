@@ -1,12 +1,26 @@
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Modal from "react-modal";
 import NavBar from "./components/NavBar";
 import "./fonts/JosefinSans-VariableFont_wght.ttf"
 import PdfViewer from "./components/PdfViewer";
+import Loading from './components/Loading';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // Simulate data fetching
+      await new Promise((resolve) => setTimeout(resolve, 2500));
+
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -19,6 +33,10 @@ export default function App() {
     setModalIsOpen(false);
   };
     return (
+        <div>
+      {loading ? (
+        <Loading />
+      ) : (
         <>
           <NavBar />
           <div id="about">
@@ -116,5 +134,7 @@ export default function App() {
             
           </div>
       </>
+      )}
+      </div>
     );
   }
