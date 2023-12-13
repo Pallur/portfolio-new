@@ -41,8 +41,6 @@ export default function App() {
                 intricacies and problem solving but also the fact that I know digital art too. 
                 With an aesthetic eye and an understanding of design principles, 
                 my approach to work is distinct.
-                
-                
             </h2>
             <h2 id="second">
                 In my freetime I help out my friends with their startup Aska Studios,
@@ -100,12 +98,16 @@ export default function App() {
             <br />
             <br />
             You can contact me on 
-            <motion.div whileHover={{ rotate: 0.2 }}>
+            <motion.div 
+            whileHover={{ rotate: 0.2 }}
+            >
                 <h3>palliasgeir(at)gmail.com</h3>
             </motion.div> 
-            or give me a call: (hover over to see) 
-            <motion.h3 initial={{ opacity: 0 }} whileHover={{ rotate: 0.2, opacity: 1 }}>
-                <h3 id="phone">+354 824-8916</h3>
+            or give me a call:
+            <motion.h3 
+            whileHover={{ rotate: 0.2 }}
+            >
+                <h3 id="phone">+354 824 8916</h3>
             </motion.h3>
             </h2>
             <div id="pdfviewer">

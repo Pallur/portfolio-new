@@ -157,6 +157,7 @@ html {
     padding: 2vw;
     background-color: #ff69bcad;
     border-radius: 20px;
+    height: fit-content;
   }
 
   #imgdiv {
@@ -200,7 +201,6 @@ html {
     font-size: 200%;
     line-height: 4vh;
   }
-  
 
 
   @font-face {
@@ -208,3 +208,33 @@ html {
     src: local('JosefinSans'), url(./fonts/JosefinSans-VariableFont_wght.ttf) format('opentype');
   }
   
+  @media (max-width: 768px) {
+    h1#intro {
+        font-size: 500%; /* Adjust the font size for smaller screens */
+    }
+
+    h2 {
+        line-height: 1.5;
+        margin: 2vw; /* Adjust margins for smaller screens */
+    }
+
+    h2#first,
+    h2#second,
+    h2#third {
+        max-width: 80%; /* Adjust the max-width for better readability on smaller screens */
+        font-size: 80%;
+    }
+
+    #imgdiv {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    img {
+        max-width: 40%;
+    }
+
+}
