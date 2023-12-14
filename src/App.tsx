@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import "./fonts/JosefinSans-VariableFont_wght.ttf"
 import PdfViewer from "./components/PdfViewer";
 import Loading from './components/Loading';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -133,6 +134,7 @@ export default function App() {
             </div>
             
           </div>
+          <Analytics />
       </>
       )}
       </div>
